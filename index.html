@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <title>Music Player</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon" sizes="any">
 </head>
 
@@ -13,26 +14,42 @@
 
     <main>
         <div class="container">
-            <img class="img-portada" src="assets/images/cover-1.png" alt="image cover 1">
+            <img class="img-portada" src="" alt="image cover 1">
             <div class="descriptions">
-                <h3>Lost in the City Lights</h3>
-                <p>Cosmo Sheldrake</p>
+                <h3 id="title">Lost in the City Lights</h3>
+                <p id="author">Cosmo Sheldrake</p>
             </div>
             <div class="progress">
                 <div class="time-content">
-                    <span class="start">00:00</span>
-                    <span class="end">02:00</span>
+                    <span class="start">0:00</span>
+                    <span class="end">2:00</span>
                 </div>
-                <div class="bar"></div>
+                <div class="bar">
+                    <div class="line-progress"></div>
+                </div>
             </div>
             <div class="controls">
+                <i id="btn-repeat" class="material-icons" title="Playlist looped">repeat</i>
                 <img class="btn-previous" src="assets/images/Stop_and_play_fill-1.svg" alt="image pla-pause">
-                <img class="btn-play" src="assets/images/Play_fill.svg" alt="image pla-pause">
+                <img class="btn-play-pause" src="assets/images/Play_fill.svg" alt="image play-pause">
                 <img class="btn-next" src="assets/images/Stop_and_play_fill.svg" alt="image pla-pause">
+                <i id="btn-library" class="material-icons">queue_music</i>
+                <audio src="" class="song"></audio>
+            </div>
+            <div class="library">
+                <div class="library-header">
+                    <div class="container-title">
+                        <i class="material-icons">queue_music</i>
+                        <span>Music List</span>
+                    </div>
+                    <i id="btn-close" class="material-icons">close</i>
+                </div>
+                <ul class="library-list"></ul>
             </div>
         </div>
     </main>
 
+    <script src="js/music-list.js"></script>
     <script src="js/script.js"></script>
 </body>
 
